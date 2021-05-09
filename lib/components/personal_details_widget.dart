@@ -4,13 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PersonalDetailsWidget extends StatelessWidget {
-  final String label;
-  final int value;
-  final String units;
-  final IconData leftIconData;
-  final IconData rightIconData;
-  final Function onLeftIconPress;
-  final Function onRightIconPress;
+  final String? label;
+  final int? value;
+  final String? units;
+  final IconData? leftIconData;
+  final IconData? rightIconData;
+  final Function? onLeftIconPress;
+  final Function? onRightIconPress;
 
   PersonalDetailsWidget(
       {this.label,
@@ -33,7 +33,7 @@ class PersonalDetailsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text(
-            label,
+            label!,
             style: kLabelTextStyle,
           ),
           Row(
@@ -42,7 +42,10 @@ class PersonalDetailsWidget extends StatelessWidget {
             textBaseline: TextBaseline.alphabetic,
             children: <Widget>[
               Text(value.toString(), style: kNumberTextStyle),
-              Text(units, style: kUnitsTextStyle,)
+              Text(
+                units!,
+                style: kUnitsTextStyle,
+              )
             ],
           ),
           Row(

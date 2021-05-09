@@ -1,9 +1,9 @@
 import 'package:bmicalculator/components/gender_widget.dart';
 import 'package:bmicalculator/components/personal_details_widget.dart';
 import 'package:bmicalculator/components/slider_parent_widget.dart';
+import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bmicalculator/constants.dart';
 
 enum Gender {
   MALE,
@@ -130,15 +130,17 @@ class _UserVitalsPageState extends State<UserVitalsPage> {
               margin: EdgeInsets.all(10),
               height: kBottomContainerHeight,
               width: double.infinity,
-              child: FlatButton(
-                color: kBottomButtonColour,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: kBottomButtonColour,
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/result');
                 },
-                child: Text("CALCULATE",
-                  style: TextStyle(
-                      fontSize: 22.0
-                  ),),
+                child: Text(
+                  "CALCULATE",
+                  style: TextStyle(fontSize: 22.0),
+                ),
               ),
             ),
           ],

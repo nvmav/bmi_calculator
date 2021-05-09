@@ -1,11 +1,8 @@
-import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 
-
 class IconButtonWidget extends StatelessWidget {
-
-  final IconData iconData;
-  final Function onPressed;
+  final IconData? iconData;
+  final Function? onPressed;
 
   IconButtonWidget({this.onPressed, this.iconData});
 
@@ -13,7 +10,7 @@ class IconButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       child: Icon(iconData),
-      onPressed: onPressed,
+      onPressed: onPressed as void Function()?,
       constraints: BoxConstraints.tightFor(
         width: 50.0,
         height: 50.0,

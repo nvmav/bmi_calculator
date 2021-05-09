@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
 class GenderWidget extends StatelessWidget {
-  final IconData iconData;
-  final String label;
-  final Color color;
-  final Function onTapCallBack;
+  final IconData? iconData;
+  final String? label;
+  final Color? color;
+  final Function? onTapCallBack;
 
-  GenderWidget({
-        this.iconData,
-        this.label,
-        this.color,
-        this.onTapCallBack});
+  GenderWidget({this.iconData, this.label, this.color, this.onTapCallBack});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +18,7 @@ class GenderWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: GestureDetector(
-        onTap: onTapCallBack,
+        onTap: onTapCallBack as void Function()?,
         child: Column(
           children: <Widget>[
             Icon(
@@ -34,7 +29,7 @@ class GenderWidget extends StatelessWidget {
               height: 15.0,
             ),
             Text(
-              label,
+              label!,
             ),
           ],
         ),

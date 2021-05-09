@@ -1,5 +1,5 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+
 const kprimColor = Color(0xFF0A0E21);
 const kscaffBackColor = kprimColor;
 
@@ -7,7 +7,6 @@ const kBottomContainerHeight = 80.0;
 const kSelectedColour = Color(0xFF1D1E33);
 const kUnselectedColour = Color(0xFF111328);
 const kBottomButtonColour = Color(0xFFEB1555);
-
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,

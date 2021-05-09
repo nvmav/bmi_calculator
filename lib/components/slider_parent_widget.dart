@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SliderParentWidget extends StatelessWidget {
-  final Slider child;
-  final Color color;
-  final double height;
+  final Slider? child;
+  final Color? color;
+  final double? height;
 
   //BuildContext context;
 
@@ -54,7 +54,7 @@ class SliderParentWidget extends StatelessWidget {
               thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
               overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
             ),
-            child: this.child,
+            child: this.child!,
           )
         ],
       ),

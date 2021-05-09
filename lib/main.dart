@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:bmicalculator/routes/user_vitals_page.dart';
 import 'package:bmicalculator/routes/bmi_result_page.dart';
+import 'package:bmicalculator/routes/user_vitals_page.dart';
+import 'package:flutter/material.dart';
+
 import 'constants.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => UserVitalsPage(),
-        '/result' : (context) => BmiResultPage(),
+        '/result': (context) => BmiResultPage(),
       },
     );
   }
